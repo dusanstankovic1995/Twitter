@@ -52,12 +52,12 @@ public class Twitter {
 	 * Ova metoda vraca niz poruka koje sadrze odgovarajuci tag u sebi.
 	 * 
 	 * @param maxBroj
-	 *            predstavlja kapacitet niza rezultat
+	 *            predstavlja kapacitet pomocnog niza rezultat
 	 * @param tag
 	 *            trazeni tag u poruci
 	 * @throws java.lang.RuntimeException
 	 *             kada je tag null ili prazan string
-	 * @return niz porka sa zeljenim tagom
+	 * @return niz poruka sa zeljenim tagom
 	 */
 
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {

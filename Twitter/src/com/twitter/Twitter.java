@@ -3,12 +3,41 @@ package com.twitter;
 import java.util.LinkedList;
 import com.twitter.poruke.TwitterPoruka;
 
+/**
+ * Klasa Twitter sadrzi:
+ * <ul>
+ * <li>atribu poruke koji predstavlja listu TwitterPoruka</li>
+ * <li>Metode za unos i vracanje poruka</li>
+ * </ul>
+ * 
+ * @author Dusan Stankovic
+ */
 public class Twitter {
+
+	/**
+	 * Atribut poruke predstavlja listu TwitterPoruka
+	 */
 	private LinkedList<TwitterPoruka> poruke = new LinkedList<TwitterPoruka>();
+
+	/**
+	 * Ova metoda vraca sve poruke iz liste poruka.
+	 * 
+	 * @return lista poruka;
+	 */
 
 	public LinkedList<TwitterPoruka> vratiSvePoruke() {
 		return poruke;
 	}
+
+	/**
+	 * Ova metoda pravi novi objekat TwitterPoruka, postavlja vrednosti njegovih
+	 * atributa i unosi ga u listu.
+	 * 
+	 * @param korisnik
+	 *            ime korisnika
+	 * @param poruka
+	 *            ogdovarajuca poruka
+	 */
 
 	public void unesi(String korisnik, String poruka) {
 		// Pravi se nova poruka i puni podacima.
@@ -18,6 +47,18 @@ public class Twitter {
 		// Poruka se unosi u listu na kraj
 		poruke.addLast(tp);
 	}
+
+	/**
+	 * Ova metoda vraca niz poruka koje sadrze odgovarajuci tag u sebi.
+	 * 
+	 * @param maxBroj
+	 *            predstavlja kapacitet niza rezultat
+	 * @param tag
+	 *            trazeni tag u poruci
+	 * @throws java.lang.RuntimeException
+	 *             kada je tag null ili prazan string
+	 * @return niz porka sa zeljenim tagom
+	 */
 
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
 		if (tag == null || tag == "")

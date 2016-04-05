@@ -6,7 +6,7 @@ import com.twitter.poruke.TwitterPoruka;
 /**
  * Klasa Twitter sadrzi:
  * <ul>
- * <li>atribu poruke koji predstavlja listu TwitterPoruka</li>
+ * <li>Atribut poruke koji predstavlja listu TwitterPoruka</li>
  * <li>Metode za unos i vracanje poruka</li>
  * </ul>
  * 
